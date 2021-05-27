@@ -1,14 +1,14 @@
 FROM node:13.12.0-alpine
 
 # set working directory
-WORKDIR /app
+WORKDIR /app/predatar-react-app
 
 # add `/app/node_modules/.bin` to $PATH
-ENV PATH /app/node_modules/.bin:$PATH
+ENV PATH /app/predatar-react-app/node_modules/.bin:$PATH
 
 # install app dependencies
-COPY predatar-react-app/package.json ./
-COPY predatar-react-app/package-lock.json ./
+COPY package.json ./
+COPY package-lock.json ./
 RUN npm install --silent
 RUN npm install react-scripts@3.4.1 -g --silent
 
