@@ -7,7 +7,8 @@ RUN mkdir -p /home/node/app && chown -R node:node /home/node/app
 WORKDIR /home/node/app
 
 # add `/app/node_modules/.bin` to $PATH
-ENV PATH /app/node_modules/.bin:$PATH
+#ENV PATH /app/node_modules/.bin:$PATH
+ENV PATH /home/node/app/node_modules/.bin:$PATH
 
 # install app dependencies
 COPY predatar-react-app/package.json ./
