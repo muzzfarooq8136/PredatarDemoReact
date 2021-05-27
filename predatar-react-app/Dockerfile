@@ -8,7 +8,7 @@ ENV PATH /app/node_modules/.bin:$PATH
 
 # install app dependencies
 COPY predatar-react-app/package.json ./
-COPY predatar-react-app/package-lock.json ./
+COPY predatar-react-app/yarn.lock ./
 RUN npm install --silent
 RUN npm install react-scripts@3.4.1 -g --silent
 
