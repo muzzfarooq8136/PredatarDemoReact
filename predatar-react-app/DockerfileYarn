@@ -17,7 +17,7 @@ COPY predatar-react-app/yarn.lock ./
 #RUN npm install react-scripts -g --silent
 
 #RUN npm install yarn -g
-RUN yarn install 
+RUN yarn install --ignore-engines
 
 # add app
 COPY /predatar-react-app/. ./
