@@ -12,13 +12,13 @@ COPY predatar-react-app/package.json ./
 COPY predatar-react-app/yarn.lock ./
 
 #RUN npm install --silent
-RUN mkdir node_modules/.cache && chmod -R 777 node_modules/.cache
+
 
 #RUN npm install react-scripts -g --silent
 
 #RUN npm install yarn -g
 RUN yarn install --ignore-engines
-
+RUN mkdir node_modules/.cache && chmod -R 777 node_modules/.cache
 # add app
 COPY /predatar-react-app/. ./
 
